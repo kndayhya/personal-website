@@ -1,11 +1,10 @@
-body {
+body{
     background-image: url();
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 200px; 
-    margin: 0;
+    padding-top:60px;
 }
 
 #logo{
@@ -19,21 +18,20 @@ body {
     align-items: center; 
     justify-content: center;
     padding-left: 20px;
-    z-index: 1000;
+    z-index: 1000;   
+}
     
-    }
+#logo img {
+    height: 100%; 
+    width: auto; 
+ }
     
-    #logo img {
-        height: 100%; 
-        width: auto; 
+@media (max-width: 600px) {
+     #logo {
+        height: 8vh;
     }
+}
     
-    @media (max-width: 600px) {
-        #logo {
-            height: 8vh;
-        }
-    }
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -45,11 +43,11 @@ body {
     z-index: 1000; 
     padding-top: 60px; 
 }
-
+    
 .sidebar.active {
     left: 0; 
 }
-
+    
 .sidebar a {
     color: black;
     text-decoration: none; 
@@ -58,11 +56,11 @@ body {
     font-size: 18px; 
     transition: background-color 0.3s ease; 
 }
-
+    
 .sidebar a:hover {
     background-color: rgba(0, 0, 0, 0.1); 
 }
-
+    
 .hamburger {
     position:fixed;
     top: 10px;
@@ -74,14 +72,14 @@ body {
     background: none;
     border: none;
 }
-
+    
 .hamburger .line {
     height: 4px;
     background-color: black;
     margin: 6px 0;
     transition: all 0.3s ease;
 }
-
+    
 
 .food img{
     height: 25%;
@@ -91,7 +89,7 @@ body {
 .polaroid a {
     background: #ffffff;
     display: inline-block;
-    margin: 55px 75px 30px;
+    margin: 0;
     padding: 15px 15px 30px;
     text-align: center;
     text-decoration: none;
@@ -103,35 +101,35 @@ body {
     transition: all .20s linear;
     z-index: 0;
     position: relative;
-  }
+}
   
   
-  .polaroid img {
+.polaroid img {
     display: block;
     width: 250px;
-  }
+}
 
-  .caption .subheading {
+.caption .subheading {
     font-size: 14px;
     margin: 0;
     color: #777;
     font-family: 'Press Start 2P', monospace;
-  }
+}
 
-  .caption .heading {
+.caption .heading {
     font-size: 18px;
     margin: 0;
     color: #3b3939;
     font-family: 'Press Start 2P', monospace;
-  }
+}
 
-  .caption .subheading {
+.caption .subheading {
     font-size: 14px;
     margin: 0;
     color: #777;
     font-family: 'Press Start 2P', monospace;
-  }
-  .polaroid a:hover {
+}
+.polaroid a:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     transform: scale(1.2);
@@ -139,4 +137,17 @@ body {
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  }
+}
+
+.polaroid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.polaroid {
+    flex: 1 1 250px;
+    max-width: 250px;
+}
