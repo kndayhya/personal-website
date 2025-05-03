@@ -66,7 +66,7 @@ z-index: 1000;
     position:fixed;
     top: 10px;
     left: 10px;
-    width: 10%;
+    width: 4%;
     height: 10%;
     cursor: pointer;
     z-index: 1100;
@@ -76,7 +76,7 @@ z-index: 1000;
 
 .hamburger .line {
     height: 4px;
-    background-color: black;
+    background-color: darkgray;
     margin: 6px 0;
     transition: all 0.3s ease;
 }
