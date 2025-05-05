@@ -25,13 +25,32 @@
 
     <script src="sidebar.js"></script>
 
+    <div class="welcome-message" style="margin-top: 120px;">
+        <h2>Welcome to My Corner of the Web!</h2>
+        <p>Take a look around, listen to some of my favorite songs, explore my memories, and don’t forget to check out the sidebar for more cool features!</p>
+        <div class="sidebar-direction">
+            <p>←Check out the Sidebar</p>
+        </div>
+    </div>
+
     <!-- Slideshow container -->
     <div class="slideshow-container">
+        <h1> Memory Box</h1>
         <img id="slideshow" src="memories/1.jpg" style="width:100%">
         <div id="caption" class="text">Memory 1</div>
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
       </div>
+
+      <div class="song-of-the-day">
+        <p>Click to Play One of My Favorite Songs</p>
+        <p id="now-playing"></p>
+        <div class = "song-controls">
+            <button onclick="randomSong()">▶</button>
+            <input type="range" id="progress-bar" value="0" max="100">
+        </div>
+        <audio id="audio-player" hidden></audio>
+    </div>
       
   <script src="main.js"></script>
 </body>

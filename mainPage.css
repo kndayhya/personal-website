@@ -97,10 +97,10 @@ z-index: 1000;
     height: 60vh; 
     margin: 10vh auto; 
     margin: auto;
-    border: 1px solid #ccc;
     border-radius: 10px;
     margin-top: 20vh;
     position:relative;
+    margin-bottom: 20vh;
   }
   
   .mySlides {
@@ -155,3 +155,152 @@ z-index: 1000;
     border-radius: 5px; 
     text-align: center;
   }
+
+  h1{
+    text-align:center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(67, 61, 61); 
+  }
+
+.song-of-the-day {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto; 
+    background-color: rgba(240, 240, 240, 0.8); 
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height:auto;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.song-controls {
+    display: flex;
+    align-items: center; 
+    flex-direction:row;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 400px;
+    margin-top: -10%;
+}
+
+
+button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    color: rgb(198, 94, 124);
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 25px solid rgb(215, 114, 141); 
+}
+
+
+#progress-bar {
+    width: 80%;
+    margin-top: 20px;
+    height: 8px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    appearance: none;
+}
+
+#progress-bar::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    background-color: #e47aa5;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#progress-bar::-moz-range-thumb {
+    background-color: #e47aa5;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+
+#now-playing {
+    font-size: 14px;
+    color: #444;
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.sidebar-direction {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #e47aa5;
+    font-weight: bold;
+    display: inline-block;
+    animation: arrowBounceLeft 1.5s infinite;
+}
+
+@keyframes arrowBounceLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto 20px; /* Centering with space below */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .slideshow-container {
+      margin-bottom: 2vh;
+    }
+  
+    .song-of-the-day {
+      margin-top: 2vh;
+    }
+  }
+
